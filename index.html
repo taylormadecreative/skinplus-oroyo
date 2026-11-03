@@ -42,7 +42,7 @@ body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size
 img,video{display:block;width:100%;height:100%;object-fit:cover}
 a{color:inherit}
 ::selection{background:var(--gold-soft);color:var(--ink)}
-h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.01em;line-height:1.04;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.008em;line-height:1.02;text-wrap:balance}
 p{max-width:34em;text-wrap:pretty}
 em{font-style:italic}
 .it{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:0}
@@ -68,7 +68,7 @@ section{position:relative}
 .hero-film .push{transform-origin:64% 40%;animation:push 18s cubic-bezier(.37,0,.63,1) infinite alternate}
 @keyframes push{from{transform:scale(1)}to{transform:scale(1.07)}}
 .hero-copy{display:flex;flex-direction:column;gap:1.4rem;align-self:end}
-.hero h1{font-size:clamp(2.6rem,1.6rem + 4.6vw,6.4rem)}
+.hero h1{font-size:clamp(2.8rem,1.5rem + 4vw,5.6rem)}
 .hero h1 .it{display:block;color:var(--gold-text);font-size:1.02em;margin-top:.12em;line-height:1}
 .hero .lede{color:var(--ink-soft);font-size:1.08em}
 .hero .lede b{font-weight:600;color:var(--ink)}
@@ -89,7 +89,7 @@ section{position:relative}
 
 /* asks */
 .asks{padding:0 var(--pad) var(--gap);display:grid;gap:clamp(2rem,4vw,4rem)}
-.asks h2{font-size:clamp(2rem,1.4rem + 2.6vw,3.8rem)}
+.asks h2{font-size:clamp(2.3rem,1.5rem + 3vw,4.3rem)}
 .asks .lead{display:grid;gap:1.25rem}
 .quote{font-style:italic;font-size:clamp(1.35rem,1.1rem + 1vw,2rem);line-height:1.3;color:var(--ink);max-width:24em}
 .quote small{display:block;font-style:normal;font-family:var(--display);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:.9rem}
@@ -97,7 +97,7 @@ section{position:relative}
 .index a{display:grid;grid-template-columns:auto 1fr;gap:1rem 1.4rem;align-items:center;padding:1.2rem 0;border-bottom:1px solid var(--sand);text-decoration:none}
 .index .thumb{width:clamp(78px,16vw,150px);aspect-ratio:4/5;overflow:hidden;border-radius:2px;grid-row:span 2}
 .index .thumb img{transition:transform .7s var(--ease)}
-.index h3{font-size:clamp(1.35rem,1rem + 1.5vw,2.3rem);display:flex;gap:.8rem;align-items:baseline}
+.index h3{font-size:clamp(1.55rem,1.1rem + 1.7vw,2.6rem);display:flex;gap:.8rem;align-items:baseline}
 .index p{color:var(--ink-soft);font-size:.95em}
 @media (hover:hover) and (pointer:fine){.index a:hover .thumb img{transform:scale(1.04)}.index a:hover h3{color:var(--gold-text)}}
 @media (min-width:900px){.asks{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}.asks .lead{position:sticky;top:2rem}}
@@ -105,7 +105,7 @@ section{position:relative}
 /* proof (forest) */
 .proof{background:var(--forest);color:var(--cream);padding:var(--gap) var(--pad)}
 .proof-grid{display:grid;gap:clamp(2rem,5vw,5rem)}
-.proof h2{font-size:clamp(1.9rem,1.2rem + 3vw,4.4rem);line-height:1.12}
+.proof h2{font-size:clamp(2.15rem,1.3rem + 3.4vw,5rem);line-height:1.08}
 .proof h2 .g{color:var(--gold-soft)}
 .proof p{color:var(--cream-soft);font-size:1.05em}
 .proof .shot{aspect-ratio:16/9;overflow:hidden;border-radius:2px}
@@ -114,7 +114,7 @@ section{position:relative}
 
 /* chapter heads */
 .chapter{padding:var(--gap) var(--pad) 0;display:grid;gap:1.2rem}
-.chapter h2{font-size:clamp(2.2rem,1.4rem + 3.6vw,5.2rem)}
+.chapter h2{font-size:clamp(2.5rem,1.5rem + 4vw,5.8rem)}
 .chapter p{color:var(--ink-soft)}
 .on-dark .chapter p{color:var(--cream-soft)}
 @media (min-width:900px){.chapter{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end;column-gap:4rem}.chapter .n{grid-column:1/-1}}
@@ -124,7 +124,7 @@ section{position:relative}
 .film{display:grid;gap:1.4rem}
 .film .media{aspect-ratio:3/2;overflow:hidden;border-radius:2px}
 .film.tall .media{aspect-ratio:4/5}
-.film h3{font-size:clamp(1.7rem,1.2rem + 2vw,3rem)}
+.film h3{font-size:clamp(1.95rem,1.3rem + 2.3vw,3.4rem)}
 .film h3 .it{color:var(--gold-text)}
 .film p{color:var(--ink-soft)}
 .film .meta{font-family:var(--display);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
@@ -163,7 +163,7 @@ section{position:relative}
 .skinplus{font-family:var(--display);font-size:clamp(4.2rem,2rem + 13vw,15rem);line-height:.86;letter-spacing:-.03em}
 .skinplus .plus{display:inline-block;transform:translateY(-.02em)}
 .camp-head{padding:var(--gap) var(--pad) 0;display:grid;gap:1.4rem}
-.camp-head h2{font-size:clamp(1.8rem,1.3rem + 2vw,3.2rem)}
+.camp-head h2{font-size:clamp(2.05rem,1.4rem + 2.3vw,3.6rem)}
 .camp-head p{color:var(--ink-soft)}
 @media (min-width:900px){.camp-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:4rem;align-items:end}.camp-head .skinplus{grid-column:1/-1}}
 
@@ -195,7 +195,7 @@ section{position:relative}
 .signature{display:grid;gap:clamp(1.5rem,3vw,3rem);padding:clamp(4rem,8vw,8rem) var(--pad) 0;align-items:center}
 .sig-film{aspect-ratio:16/9;overflow:hidden;border-radius:2px;background:var(--sand)}
 .sig-copy{display:grid;gap:1.1rem}
-.sig-copy h3{font-size:clamp(1.7rem,1.2rem + 2vw,3rem)}
+.sig-copy h3{font-size:clamp(1.95rem,1.3rem + 2.3vw,3.4rem)}
 .sig-copy p{color:var(--ink-soft)}
 .sig-mark{width:clamp(72px,9vw,110px);aspect-ratio:1;opacity:1;transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .sig-mark img{object-fit:contain}
@@ -220,11 +220,11 @@ section{position:relative}
 
 /* process */
 .process{padding:var(--gap) var(--pad)}
-.process h2{font-size:clamp(2rem,1.4rem + 2.6vw,3.8rem);margin-bottom:clamp(2rem,4vw,3.5rem)}
+.process h2{font-size:clamp(2.3rem,1.5rem + 3vw,4.3rem);margin-bottom:clamp(2rem,4vw,3.5rem)}
 .steps{list-style:none;display:grid;gap:0;counter-reset:s}
 .steps li{display:grid;grid-template-columns:3.2rem 1fr;gap:.2rem 1rem;padding:1.4rem 0;border-top:1px solid var(--sand)}
 .steps .n{grid-row:span 2;font-size:1.6em;line-height:1}
-.steps h3{font-size:clamp(1.25rem,1rem + .8vw,1.7rem)}
+.steps h3{font-size:clamp(1.45rem,1.15rem + .9vw,1.95rem);font-weight:600}
 .steps p{color:var(--ink-soft);font-size:.95em}
 @media (min-width:1000px){.steps h3{min-height:2.2em}.steps{grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem}.steps li{grid-template-columns:1fr;border-top:1px solid var(--gold);padding-top:1.4rem}.steps .n{grid-row:auto;margin-bottom:.6rem}}
 
@@ -232,7 +232,7 @@ section{position:relative}
 .talk{background:var(--forest);color:var(--cream);display:grid}
 .talk-img{aspect-ratio:4/5;overflow:hidden}
 .talk-copy{padding:var(--gap) var(--pad);display:grid;gap:1.4rem;align-content:center}
-.talk h2{font-size:clamp(2.4rem,1.5rem + 4vw,5.6rem)}
+.talk h2{font-size:clamp(2.7rem,1.6rem + 4.5vw,6.3rem)}
 .talk h2 .it{color:var(--gold-soft)}
 .talk p{color:var(--cream-soft)}
 .talk .btn{background:var(--gold)}
@@ -275,7 +275,7 @@ footer img{height:30px;width:auto}
   </div><figcaption class="cap">Concept frame</figcaption></figure>
   <div class="hero-copy">
     <span class="tag rv">A creative proposal · November 2026</span>
-    <h1 class="rv" style="--d:.08s">Every skin has a voice.<span class="it">Let's put yours on camera.</span></h1>
+    <h1 class="rv" style="--d:.08s">Every skin has a voice.<span class="it">Let’s put yours on camera.</span></h1>
     <p class="lede rv" style="--d:.16s">Storytelling, cinematic film and a signature campaign for <b>SKINPLUSBYOROYO</b>, shot in your studio in Little Elm.</p>
     <div class="cta-row rv" style="--d:.24s">
       <a class="btn" href="#campaign">See the campaign</a>
@@ -444,7 +444,7 @@ footer img{height:30px;width:auto}
 </section>
 
 <section class="process" aria-labelledby="proc-h">
-  <h2 id="proc-h" class="rv">How we'd build it.</h2>
+  <h2 id="proc-h" class="rv">How we’d build it.</h2>
   <ol class="steps">
     <li class="rv"><span class="n">01</span><h3>A 15-minute call</h3><p>Tell us who you want to reach and what you want them to feel.</p></li>
     <li class="rv" style="--d:.06s"><span class="n">02</span><h3>Creative direction and storyboard</h3><p>Every frame drawn out first. Nothing is filmed until you approve it.</p></li>
@@ -456,7 +456,7 @@ footer img{height:30px;width:auto}
 <section id="talk" class="talk on-dark" aria-labelledby="talk-h">
   <div class="talk-img"><img src="assets/img/reel-alt.webp" alt="A woman with rich dark brown skin in a cream towel looks back over her shoulder" loading="lazy" width="1000" height="1784"></div>
   <div class="talk-copy">
-    <h2 id="talk-h" class="rv">Let's talk <span class="it">this week.</span></h2>
+    <h2 id="talk-h" class="rv">Let’s talk <span class="it">this week.</span></h2>
     <p class="rv" style="--d:.06s">Fifteen minutes, whenever works between your appointments.</p>
     <div class="cta-row rv" style="--d:.12s">
       <a class="btn" href="sms:+18177071291">Text Elliott</a>
