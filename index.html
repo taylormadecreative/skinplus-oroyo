@@ -204,19 +204,12 @@ section{position:relative}
 @media (min-width:900px){.signature{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
 
 /* twin (ink) */
-.twin{background:var(--ink);color:var(--cream);padding-bottom:var(--gap)}
-.twin .chapter .n{color:var(--gold-soft)}
-.twin-grid{display:grid;gap:clamp(2rem,5vw,5rem);padding:clamp(2.5rem,5vw,4.5rem) var(--pad) 0;align-items:center}
-.twin .phone{max-width:340px;width:100%;margin-inline:auto;background:#0f0d0b;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
 .sound{position:absolute;left:50%;bottom:1.2rem;transform:translateX(-50%);display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:.75rem 1rem;border:0;border-radius:999px;background:rgba(246,239,228,.94);color:var(--ink);cursor:pointer;transition:transform .16s var(--ease)}
 .sound:active{transform:translateX(-50%) scale(.97)}
 .sound svg{width:16px;height:16px}
 .sound .on{display:none}.sound[aria-pressed="true"] .on{display:block}.sound[aria-pressed="true"] .off{display:none}
-.twin-copy{display:grid;gap:1.2rem}
-.twin-copy p{color:var(--cream-soft)}
 .uses{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.2rem 1.5rem;margin-top:.4rem}
 .uses li{padding:.7rem 0;border-top:1px solid rgba(246,239,228,.16);font-size:.98em}
-@media (min-width:900px){.twin-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
 
 /* process */
 .process{padding:var(--gap) var(--pad)}
@@ -259,6 +252,7 @@ footer img{height:30px;width:auto}
   .sound{display:none}
   section,.film,.ad{break-inside:avoid}
 }
+.camp-link{display:inline-flex;align-items:center;min-height:44px;color:var(--gold-text,#8A5A2B);font-family:var(--display,inherit);letter-spacing:.12em;text-transform:uppercase;font-size:max(.75rem,12px);text-decoration:none;border-bottom:1px solid currentColor}
 </style>
 </head>
 <body>
@@ -363,8 +357,9 @@ footer img{height:30px;width:auto}
   <div class="camp-head">
     <span class="n rv">03 · The signature campaign</span>
     <p class="skinplus rv" aria-hidden="true">SKIN<span class="plus">+</span></p>
-    <h2 id="camp-h" class="rv">Your name is already the campaign.</h2>
+    <h2 id="camp-h" class="rv">Your Skin, <span class="it">Finally Seen.</span></h2>
     <p class="rv" style="--d:.08s">SKINPLUS says it out loud: skin, plus something. Every spot finishes the sentence with what your client comes away with.</p>
+    <p class="rv" style="--d:.12s"><a class="camp-link" href="campaign/">See the full campaign: every look and every shot →</a></p>
   </div>
 
   <div class="wall" role="list">
@@ -412,59 +407,28 @@ footer img{height:30px;width:auto}
   </div>
 </section>
 
-<section id="twin" class="twin on-dark" aria-labelledby="twin-h">
-  <div class="chapter">
-    <span class="n rv">And one more thing</span>
-    <h2 id="twin-h" class="rv">Meet your digital twin.</h2>
-    <p class="rv" style="--d:.08s">The questions your DMs ask every week, answered in your look and your voice, without stopping a treatment to film.</p>
-  </div>
-  <div class="twin-grid">
-    <div class="phone rv">
-      <div class="screen">
-        <video id="twinvid" data-auto muted loop playsinline preload="none" poster="assets/img/twin-poster.jpg" aria-label="Patricia's digital twin walks a client through laser prep"><source src="assets/video/twin.mp4" type="video/mp4"></video>
-        <button class="sound" id="sound" type="button" aria-pressed="false" aria-controls="twinvid">
-          <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
-          <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></svg>
-          <span>Tap for sound</span>
-        </button>
-      </div>
-    </div>
-    <div class="twin-copy rv" style="--d:.1s">
-      <p>We built this preview from your public photos and videos so you could see and hear the idea as yourself. Nothing goes live without your yes.</p>
-      <p>This one walks a client through your laser prep, word for word from your website.</p>
-      <p>Use it for the things you explain every day:</p>
-      <ul class="uses">
-        <li>Prep and aftercare</li>
-        <li>Your most-asked DMs</li>
-        <li>New service launches</li>
-        <li>Membership walk-throughs</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <section class="process" aria-labelledby="proc-h">
   <h2 id="proc-h" class="rv">How we’d build it.</h2>
   <ol class="steps">
-    <li class="rv"><span class="n">01</span><h3>A 15-minute call</h3><p>Tell us who you want to reach and what you want them to feel.</p></li>
-    <li class="rv" style="--d:.06s"><span class="n">02</span><h3>Creative direction and storyboard</h3><p>Every frame drawn out first. Nothing is filmed until you approve it.</p></li>
-    <li class="rv" style="--d:.12s"><span class="n">03</span><h3>Shoot day in your studio</h3><p>Filmed in Little Elm with your space, your hands and the clients who want to be on camera.</p></li>
-    <li class="rv" style="--d:.18s"><span class="n">04</span><h3>Edit, color and launch</h3><p>Cut for Reels, Stories, ads and your website, with captions and sound.</p></li>
+    <li class="rv"><span class="n">01</span><h3>The campaign, drawn out</h3><p>Five looks and 39 shots, every frame planned before anything is filmed.</p></li>
+    <li class="rv" style="--d:.06s"><span class="n">02</span><h3>Your picks</h3><p>Circle what you love on the moodboard and pick a week. Nothing is filmed until you approve it.</p></li>
+    <li class="rv" style="--d:.12s"><span class="n">03</span><h3>Four shoot days</h3><p>A photoshoot, a cinematic day in your studio, a UGC day and a day on location, after Thanksgiving.</p></li>
+    <li class="rv" style="--d:.18s"><span class="n">04</span><h3>Edit, color and launch</h3><p>Cut for Reels, Stories, ads, your website and your studio, with captions and sound.</p></li>
   </ol>
 </section>
 
 <section id="talk" class="talk on-dark" aria-labelledby="talk-h">
   <div class="talk-img"><img src="assets/img/reel-alt.webp" alt="A woman with rich dark brown skin in a cream towel looks back over her shoulder" loading="lazy" width="1000" height="1784"></div>
   <div class="talk-copy">
-    <h2 id="talk-h" class="rv">Let’s talk <span class="it">this week.</span></h2>
-    <p class="rv" style="--d:.06s">Fifteen minutes, whenever works between your appointments.</p>
+    <h2 id="talk-h" class="rv">See the <span class="it">full campaign.</span></h2>
+    <p class="rv" style="--d:.06s">Every look and every shot, with the dates. Circle what you love and text it to me.</p>
     <div class="cta-row rv" style="--d:.12s">
-      <a class="btn" href="sms:+18177071291">Text Elliott</a>
-      <a class="btn ghost" href="https://ig.me/m/taylormade_creative">Message on Instagram</a>
+      <a class="btn" href="campaign/">See the campaign</a>
+      <a class="btn ghost" href="sms:+18177071291">Text Elliott</a>
     </div>
     <div class="who rv" style="--d:.18s">
       <b>Elliott Taylor · Taylormade Creative</b>
-      <p>Creative director in Dallas–Fort Worth for fourteen years. Photography, film, motion graphics and AI production, made under one roof. <a href="https://www.taylormadecreative.net/">See the work</a></p>
+      <p>Creative director in Dallas–Fort Worth for fourteen years. Photography, film and motion graphics, made under one roof. <a href="https://www.taylormadecreative.net/">See the work</a></p>
     </div>
   </div>
 </section>
